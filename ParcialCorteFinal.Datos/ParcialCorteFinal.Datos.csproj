@@ -43,9 +43,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion\ConexionMaestra.cs" />
+    <Compile Include="Interfaces\IProductoRepository.cs" />
     <Compile Include="Interfaces\ISedesRepository.cs" />
+    <Compile Include="Interfaces\IVentasRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorios\ProductoRepository.cs" />
     <Compile Include="Repositorios\SedeRepository.cs" />
+    <Compile Include="Repositorios\VentaRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ParcialCorteFinal.Entidad\ParcialCorteFinal.Entidad.csproj">

@@ -2,6 +2,8 @@
 using ParcialCorteFinal.Negocio.Servicio;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace ParcialCorteFinal.Presentacion.Formularios
@@ -9,6 +11,7 @@ namespace ParcialCorteFinal.Presentacion.Formularios
     public partial class FromVentas : Form
     {
         SedeServicio sedeServicio = new SedeServicio();
+        VentaServicio ventaServicio = new VentaServicio(); 
 
         public FromVentas()
         {
@@ -53,7 +56,14 @@ namespace ParcialCorteFinal.Presentacion.Formularios
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
-            AbrirArchivo();
+            string rutaArchivo = AbrirArchivo();
+            if (!string.IsNullOrEmpty(rutaArchivo))
+            {
+                string codigoSedeSeleccionada = comboBoxSedes.SelectedValue.ToString();
+                List<Venta> ventas = ventaServicio.ObtenerVentasPorSede(rutaArchivo, codigoSedeSeleccionada);
+
+                tabla.DataSource = ventas; 
+            }
         }
     }
 }
