@@ -47,7 +47,9 @@
     <Folder Include="Conexion\" />
     <Folder Include="Interfaces\" />
     <Folder Include="Repositorios\" />
-    <Folder Include="Script\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Script\Script_ParcialFinalDB.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
