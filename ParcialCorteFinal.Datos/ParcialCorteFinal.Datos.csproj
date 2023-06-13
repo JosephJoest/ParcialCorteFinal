@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A7589022-06EC-4937-80A0-02547E1DD5ED}</ProjectGuid>
+    <ProjectGuid>{0E468777-FFB3-4EAF-8A41-84ACB2FBD0A7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ParcialCorteFinal.Datos</RootNamespace>
@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,12 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conexion\ConexionMaestra.cs" />
+    <Compile Include="Interfaces\ISedesRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorios\SedeRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Conexion\" />
-    <Folder Include="Interfaces\" />
-    <Folder Include="Repositorios\" />
+    <ProjectReference Include="..\ParcialCorteFinal.Entidad\ParcialCorteFinal.Entidad.csproj">
+      <Project>{BA09D4B8-C9B4-4536-BCDF-1A5FE06242CA}</Project>
+      <Name>ParcialCorteFinal.Entidad</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Script\Script_ParcialFinalDB.sql" />

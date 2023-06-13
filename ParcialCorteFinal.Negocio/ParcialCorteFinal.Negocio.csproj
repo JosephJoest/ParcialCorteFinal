@@ -42,9 +42,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicio\SedeServicio.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Servicio\" />
+    <ProjectReference Include="..\ParcialCorteFinal.Datos\ParcialCorteFinal.Datos.csproj">
+      <Project>{0E468777-FFB3-4EAF-8A41-84ACB2FBD0A7}</Project>
+      <Name>ParcialCorteFinal.Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParcialCorteFinal.Entidad\ParcialCorteFinal.Entidad.csproj">
+      <Project>{BA09D4B8-C9B4-4536-BCDF-1A5FE06242CA}</Project>
+      <Name>ParcialCorteFinal.Entidad</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

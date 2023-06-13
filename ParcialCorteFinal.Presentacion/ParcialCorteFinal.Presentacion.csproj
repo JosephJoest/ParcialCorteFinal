@@ -46,8 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\FromVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FromVentas.Designer.cs">
+      <DependentUpon>FromVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\FromVentas.resx">
+      <DependentUpon>FromVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -71,7 +80,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Formularios\" />
+    <ProjectReference Include="..\ParcialCorteFinal.Entidad\ParcialCorteFinal.Entidad.csproj">
+      <Project>{ba09d4b8-c9b4-4536-bcdf-1a5fe06242ca}</Project>
+      <Name>ParcialCorteFinal.Entidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParcialCorteFinal.Negocio\ParcialCorteFinal.Negocio.csproj">
+      <Project>{2bfec43e-a1eb-4dcd-b32c-890964a15312}</Project>
+      <Name>ParcialCorteFinal.Negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
